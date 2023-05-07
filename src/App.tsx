@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div>
-      <h1>{greetMsg}</h1>
+      <h1 className="font-bold">{greetMsg}</h1>
     </div>
   );
 }

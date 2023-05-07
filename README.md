@@ -1,7 +1,31 @@
-# Tauri + React + Typescript
+<div align="center">
+  <h1>Drooid</h1>
+  <p><strong>Status:</strong> Under Development</p>
+</div>
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+## Table of Contents
 
-## Recommended IDE Setup
+- [Introduction](#introduction)
+- [Latest Release](#latest-release)
+- [Available Platforms](#available-platforms)
+- [Notes](#notes)
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+## Introduction
+
+**Drooid** is an open-source multi-platform application that enables you to make ChatGPT queries from your desktop device.
+
+## Latest Release
+
+N/A
+
+## Available Platforms
+
+- Windows
+- MacOS
+- Linux
+- Android <sup><a href="#fr">fr</a></sup>
+- iOS <sup><a href="#fr">fr</a></sup>
+
+## Notes
+
+<sup><a id="fr">fr</a></sup>: Future Release

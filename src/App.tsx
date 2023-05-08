@@ -8,7 +8,7 @@ const App: FC = () => {
     void greet('Drooid')
   }, [])
 
-  async function greet (name: string): Promise<void> {
+  async function greet(name: string): Promise<void> {
     // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
     setGreetMsg(await invoke('greet', { name }))
   }

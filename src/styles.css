@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input,
+textarea {
+  @apply bg-eerie p-2 rounded-xl shadow;
+}
+
+textarea {
+  @apply max-w-full resize-none w-full;
+}

@@ -24,7 +24,7 @@ const Layout: FC = () => {
     <>
       <div className="flex bg-night text-white min-h-screen h-full">
         <Navigation />
-        <main className="h-full p-4 w-full">
+        <main className="h-full w-full">
           <Outlet />
         </main>
       </div>

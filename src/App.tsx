@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 import { useRoutes } from 'react-router-dom'
-import Dashboard from './pages/Dashboard'
+import Archive from './pages/Archive'
 import Prompt from './pages/Prompt'
 import Settings from './pages/Settings'
 import Layout from './layout'
@@ -12,11 +12,11 @@ const router = [
     children: [
       {
         index: true,
-        element: <Dashboard />,
+        element: <Prompt />,
       },
       {
-        path: '/prompt',
-        element: <Prompt />,
+        path: '/archive',
+        element: <Archive />,
       },
       {
         path: '/settings',

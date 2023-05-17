@@ -1,7 +1,7 @@
 import { type FC, useEffect, useState } from 'react'
 import { invoke } from '@tauri-apps/api/tauri'
 
-const Dashboard: FC = () => {
+const Archive: FC = () => {
   const [greetMsg, setGreetMsg] = useState('')
 
   useEffect(() => {
@@ -14,10 +14,10 @@ const Dashboard: FC = () => {
   }
   return (
     <div>
-      <div>Dashboard</div>
+      <div>Archive</div>
       <p>{greetMsg}</p>
     </div>
   )
 }
 
-export default Dashboard
+export default Archive

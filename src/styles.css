@@ -10,3 +10,7 @@ textarea {
 textarea {
   @apply max-w-full resize-none w-full;
 }
+
+a.active {
+  @apply font-bold text-aureolin;
+}

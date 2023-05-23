@@ -4,6 +4,7 @@ import Archive from './pages/Archive'
 import Prompt from './pages/Prompt'
 import Settings from './pages/Settings'
 import Layout from './layout'
+import { SettingsProvider } from './store/Settings'
 
 const router = [
   {
@@ -29,7 +30,7 @@ const router = [
 const App: FC = () => {
   const routes = useRoutes(router)
 
-  return <>{routes}</>
+  return <SettingsProvider>{routes}</SettingsProvider>
 }
 
 export default App

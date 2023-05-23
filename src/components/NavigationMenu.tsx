@@ -47,16 +47,6 @@ const NavigationMenu: FC = () => {
           )
         })}
       </div>
-
-      <button className="bg-aureolin font-bold p-1 rounded text-night w-full">
-        <a
-          href="https://github.com/iamthismarvin/drooid"
-          rel="noreferrer noopener"
-          target="_blank"
-        >
-          GitHub
-        </a>
-      </button>
     </nav>
   )
 }

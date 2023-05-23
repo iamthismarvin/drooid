@@ -14,3 +14,17 @@ textarea {
 a.active {
   @apply font-bold text-aureolin;
 }
+
+button {
+  @apply bg-aureolin font-bold px-3 py-1 rounded text-night disabled:bg-gray-700;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}

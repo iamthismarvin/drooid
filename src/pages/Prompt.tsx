@@ -58,7 +58,7 @@ const Prompt: FC = () => {
       </div>
       <div className="flex items-center p-4 relative">
         <button
-          className="absolute right-8 text-aureolin"
+          className="absolute bg-transparent p-0 right-8 text-aureolin"
           onClick={handleSubmit}
         >
           <svg

@@ -6,11 +6,15 @@ import {
   useRef,
   useEffect,
 } from 'react'
-import Message from '../components/Message'
+
+import Message, {
+  type MessageProps as PromptMessage,
+} from '../components/Message'
+import { queryChat } from '../services/chat'
 
 const Prompt: FC = () => {
   const [promptText, setPromptText] = useState('')
-  const [promptMessages, setPromptMessages] = useState<string[]>([])
+  const [promptMessages, setPromptMessages] = useState<PromptMessage[]>([])
   const promptMessagesRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -32,28 +36,54 @@ const Prompt: FC = () => {
     setPromptText(event.target.value)
   }
 
-  function handleSubmit(): void {
+  async function handleSubmit(): Promise<void> {
     if (isEmptyOrWhitespace(promptText)) return
     setPromptMessages((currentPromptMessages) => [
       ...currentPromptMessages,
-      promptText,
+      {
+        createdAt: new Date().toISOString(),
+        createdBy: 'user',
+        message: promptText,
+      },
     ])
+    const userText = promptText
     setPromptText('')
+    await handleChat(userText)
   }
 
-  function handleKeyPress(event: KeyboardEvent<HTMLTextAreaElement>): void {
+  async function handleKeyPress(
+    event: KeyboardEvent<HTMLTextAreaElement>
+  ): Promise<void> {
     if (event.shiftKey) return
     if (event.key === 'Enter') {
       event.preventDefault()
-      handleSubmit()
+      await handleSubmit()
     }
+  }
+
+  async function handleChat(text: string): Promise<void> {
+    await queryChat(text).then((response: any) => {
+      setPromptMessages((currentPromptMessages) => [
+        ...currentPromptMessages,
+        {
+          createdAt: new Date().toISOString(),
+          createdBy: 'ai',
+          message: response,
+        },
+      ])
+    })
   }
 
   return (
     <div className="flex flex-col h-screen max-w-3xl mx-auto relative">
       <div className="flex-1 overflow-auto p-4" ref={promptMessagesRef}>
-        {promptMessages.map((text, index) => (
-          <Message key={index} text={text} />
+        {promptMessages.map(({ createdAt, createdBy, message }, index) => (
+          <Message
+            key={index}
+            createdAt={createdAt}
+            createdBy={createdBy}
+            message={message}
+          />
         ))}
       </div>
       <div className="flex items-center p-4 relative">

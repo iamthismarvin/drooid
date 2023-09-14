@@ -14,7 +14,7 @@
 
 ## Introduction
 
-**Drooid** is an open-source multi-platform application that enables you to make ChatGPT queries from your desktop device.
+**Drooid** is an open-source multi-platform application that enables you to make Hugging Face Inference API queries from your desktop device.
 
 ## Latest Release
 

@@ -28,3 +28,7 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield;
 }
+
+.code-block {
+  @apply bg-black p-4 rounded-xl text-green-400;
+}

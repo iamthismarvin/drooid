@@ -3,6 +3,8 @@
   <p><strong>Status:</strong> Under Development</p>
 </div>
 
+![Sreenshot](https://raw.githubusercontent.com/iamthismarvin/drooid/chat/public/images/drooid_preview.png)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
